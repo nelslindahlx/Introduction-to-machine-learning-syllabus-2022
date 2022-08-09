@@ -1,3 +1,7 @@
+## Introduction:
+
+I used this template for a paper called, "An independent study based introduction to machine learning syllabus for 2022."
+
 
 ## Description:
 
