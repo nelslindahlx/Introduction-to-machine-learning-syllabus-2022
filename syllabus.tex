@@ -1,7 +1,9 @@
 \documentclass{article}
 
-\usepackage{PRIMEarxiv}
-
+\usepackage{PRIMEarxiv}     % From the template
+\usepackage[table,xcdraw]{xcolor} % From Tables Generator
+\usepackage[normalem]{ulem} % From Tables Generator
+\useunder{\uline}{\ul}{}    % From Tables Generator
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
 \usepackage{hyperref}       % hyperlinks
@@ -67,7 +69,7 @@ You might remember the Substack post from week 57 titled, “How would I compose
 \item Week 84: Neural networks (ML syllabus edition 5/8)
 \item Week 85: Neuroscience (ML syllabus edition 6/8)
 \item Week 86: Ethics, fairness, bias, and privacy (ML syllabus edition 7/8)
-\item Week 87: MLOps (ML syllabus edition 8/8)
+\item Week 87: My MLOps lecture (ML syllabus edition 8/8)
 \end{itemize}
 
 That is what we are going to cover. At the end of the process, I’ll have a first glance at an introduction to machine learning syllabus. My efforts are annotated and include some narrative compared to a pure outline based syllabus. Bringing content together that is foundational is an important part about building this collection. At this point, just describing the edge of where things are in the field of machine learning would create something that would only be current for a moment and would fade away as the technology frontier curve advances. Instead of going that route it will be better to build a strong foundation for people to consume that will support the groundwork necessary to move from introductory to advanced machine learning. Yes, you might have caught from that last sentence that at some point I’ll need to write the next syllabus as a companion to this one. Stay tuned for a future advanced machine learning syllabus to go along with this introductory to machine learning edition. Enough overview has now occurred. It’s time to get started…
@@ -362,26 +364,124 @@ That brief introduction aside. We are now going to focus on specific types of ne
 \paragraph{Conclusion} - This is an intense way of starting to dig into neural networks and you will very quickly see that the use cases outside of pure machine learning or artificial intelligence are driving this field forward. A lot of these use cases are within the medical field or health care in general and are super interesting and somewhat related to neuroscience. That is where the next lecture will head in this series. Discussion will move from specific types of neural networks and the research associated with them to the broader topic of neuroscience and how it relates to machine learning. 
 
 \section{Week 85: Neuroscience}
-Neuroscience is a complex topic to dig into in general. Within the context of machine learning it gets even more interesting. Understanding that context of complexity it will make sense here to focus on 5 scholarly articles that could help provide a solid context here for the relationship between neuroscience and machine learning. 
+Neuroscience is a complex topic to dig into in general. Studying the nervous system is a complex thing to do before you add in the concept of machine learning or artificial intelligence. Within the context of machine learning it gets even more interesting for academic researchers, practitioners, and anybody building neural networks. Understanding that context of complexity within any inquiry into neuroscience, it will make sense here to focus on 5 scholarly articles that could help provide a solid context here for the relationship between neuroscience and machine learning. Within this section of inquiry the articles are really going to bring forward the complexity of the issue. The scholarly articles selected to cover neuroscience include a lot of focus on how the two subjects work together and the future of that collaboration.  
 
-\begin{itemize}
+
 \begin{enumerate}
 \item \href{https://www.nature.com/articles/d41586-019-02212-4 }{Savage, N. (2019). How AI and neuroscience drive each other forwards. Nature, 571(7766), S15-S15.} \cite{savage2019ai}
-\item \item \href{https://www.nature.com/articles/s41593-019-0520-2}{Richards, B. A., Lillicrap, T. P., Beaudoin, P., Bengio, Y., Bogacz, R., Christensen, A., ... \& Kording, K. P. (2019). A deep learning framework for neuroscience. Nature neuroscience, 22(11), 1761-1770.} \cite{richards2019deep}
-\item \item \href{https://www.frontiersin.org/articles/10.3389/fncom.2016.00094/pdf}{Marblestone, A. H., Wayne, G., \& Kording, K. P. (2016). Toward an integration of deep learning and neuroscience. Frontiers in computational neuroscience, 94.} \cite{marblestone2016toward}
-\item \item \href{https://archive-ouverte.unige.ch/unige:33936/ATTACHMENT01}{Richiardi, J., Achard, S., Bunke, H., \& Van De Ville, D. (2013). Machine learning with brain graphs: predictive modeling approaches for functional imaging in systems neuroscience. IEEE Signal processing magazine, 30(3), 58-70.} \cite{richiardi2013machine}  
-\item \item \href{https://www.jneurosci.org/content/jneuro/38/7/1601.full.pdf}{Vu, M. A. T., Adalı, T., Ba, D., Buzsáki, G., Carlson, D., Heller, K., ... \& Dzirasa, K. (2018). A shared vision for machine learning in neuroscience. Journal of Neuroscience, 38(7), 1601-1607.} \cite{vu2018shared}
+\item \href{https://www.nature.com/articles/s41593-019-0520-2}{Richards, B. A., Lillicrap, T. P., Beaudoin, P., Bengio, Y., Bogacz, R., Christensen, A., ... \& Kording, K. P. (2019). A deep learning framework for neuroscience. Nature neuroscience, 22(11), 1761-1770.} \cite{richards2019deep}
+\item \href{https://www.frontiersin.org/articles/10.3389/fncom.2016.00094/pdf}{Marblestone, A. H., Wayne, G., \& Kording, K. P. (2016). Toward an integration of deep learning and neuroscience. Frontiers in computational neuroscience, 94.} \cite{marblestone2016toward}
+\item \href{https://archive-ouverte.unige.ch/unige:33936/ATTACHMENT01}{Richiardi, J., Achard, S., Bunke, H., \& Van De Ville, D. (2013). Machine learning with brain graphs: predictive modeling approaches for functional imaging in systems neuroscience. IEEE Signal processing magazine, 30(3), 58-70.} \cite{richiardi2013machine}  
+\item \href{https://www.jneurosci.org/content/jneuro/38/7/1601.full.pdf}{Vu, M. A. T., Adalı, T., Ba, D., Buzsáki, G., Carlson, D., Heller, K., ... \& Dzirasa, K. (2018). A shared vision for machine learning in neuroscience. Journal of Neuroscience, 38(7), 1601-1607.} \cite{vu2018shared}
 \end{enumerate}
 
-\end{itemize}
-\section{Conclusion}
-Your conclusion here
+\section{Week 86: Ethics, fairness, bias, and privacy}
+This set of topics was either going to be the foundation to start this series or it was going to be collected as a set of thoughts at the end. You can tell that obviously I demurred from starting with ethics, fairness, bias, and privacy in machine learning until the full foundation was set for the topics under consideration. These topics are not assembled as an afterthought and are very important to any journey within the machine learning space. This technology has the potential to be near omnipresent in day to day life and certainly within anything where decision making or anything digital persists. Each of these topics is going to receive a solid overview followed by a series of scholarly articles like the previous lectures. You are now well aware from seeing dozens of other scholarly articles that these topics do not appear in each and every work and while they are foundational are not consistently a foundation in literature reviews or considerations for the practical work occurring within the machine learning space. I would clearly argue and have for years that just because you can do a thing does not mean that you should. You have to consider the consequences and realities of bringing that thing forward in a world where models and methods are so readily shared on GitHub and other platforms. 
+Overlap certainly occurs between the topics of ethics, fairness, bias, and privacy within the machine learning academic space. I have tried to sort the articles to help enhance readability within the different categories, but you will see some overlap. 
 
-\section{Bonus resources}
-Your conclusion here
+\paragraph{Ethics} - This topic got covered back in week 65. I’m going to rework part of that content here so if it feels familiar that is consistent with it appearing before about 20 weeks ago. Anybody preparing machine learning content should be comfortable with presenting ethics as a topic of consideration. I firmly believe and hope you would support that effort after coming along for this journey so far into this independent study syllabus. Ethics should be covered as a part of every machine learning course. Perhaps the best way to sum it up as an imperative would be to say, “Just because you can do a thing does not mean you should.” Machine learning opens the door to some incredibly advanced possibilities for drug discovery, medical image screening, or just spam detection to protect your inbox. The choices people make with machine learning use cases is where the technology and ethics have to be aligned. Full stop. That is the point I’m trying to make today and this essay could stop right here.
+
+No one really solid essay or set of essays on AI/ML ethics jumped out and caught my attention this week during my search. Part of my search involved digging into results from Google Scholar that yielded a ton of different options to read about \href{https://scholar.google.com/scholar?q=ethics+in+machine+learning&hl=en&as_sdt=0&as_vis=1&oi=scholart}{“ethics in machine learning”}. A lot of those articles cover how to introduce ethics to machine learning courses and about the need to consider ethics when building machine learning implementations. Given that those two calls to action are the first things that come up and they are certainly adjacent to the primary machine learning content being shared it might make you take a moment to pause and consider how much the field of machine learning should deeply consider the idea that just because it can do something does not mean you should. Some use cases are pretty basic and the ethics of what is happening is fairly settled. Other use cases walk right up to the edge of what is reasonable in terms of fairness and equity.
+
+\begin{itemize}
+\item \href{https://www.nature.com/articles/s41599-020-0501-9.pdf}{Lo Piano, S. (2020). Ethical principles in machine learning and artificial intelligence: cases from the field and possible ways forward. Humanities and Social Sciences Communications, 7(1), 1-7.} \cite{lo2020ethical}  
+\item \href{https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/849782a6-06bf-4ce8-9144-a93de4455d1c/content}{Greene, D., Hoffmann, A. L., \& Stark, L. (2019). Better, nicer, clearer, fairer: A critical assessment of the movement for ethical artificial intelligence and machine learning.} \cite{greene2019better}  
+\end{itemize}
+
+\paragraph{Fairness and Bias} - Implementing machine learning algorithms generally involves working with imperfect data sets that have different biases that have to be accounted for and ultimately corrected. 
+
+\begin{itemize}
+\item \href{https://arxiv.org/pdf/1808.00023.pdf }{Corbett-Davies, S., \& Goel, S. (2018). The measure and mismeasure of fairness: A critical review of fair machine learning. arXiv preprint arXiv:1808.00023.} \cite{corbett2018measure}
+\item \href{https://arxiv.org/pdf/1810.08810.pdf }{Chouldechova, A., \& Roth, A. (2018). The frontiers of fairness in machine learning. arXiv preprint arXiv:1810.08810.} \cite{chouldechova2018frontiers}
+\item \href{https://fairmlbook.org/pdf/fairmlbook.pdf}{Barocas, S., Hardt, M., \& Narayanan, A. (2017). Fairness in machine learning. Nips tutorial, 1, 2.} \cite{barocas2017fairness}
+\item \href{https://arxiv.org/pdf/1908.09635.pdf}{Mehrabi, N., Morstatter, F., Saxena, N., Lerman, K., \& Galstyan, A. (2021). A survey on bias and fairness in machine learning. ACM Computing Surveys (CSUR), 54(6), 1-35.} 
+\item \href{https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/d062bd2a-df54-48d4-b27e-76d903b9caaa/content}{Yapo, A., \& Weiss, J. (2018). Ethical implications of bias in machine learning.} 
+\end{itemize}
+
+\paragraph{Privacy} - No conversation about machine learning would be complete without a consideration of privacy. A part of the ethical considerations surrounding the use of machine learning algorithms is inherently privacy of data and privacy of the outputs. 
+
+\begin{itemize}
+\item \href{https://arxiv.org/pdf/1412.7584.pdf }{Ji, Z., Lipton, Z. C., \& Elkan, C. (2014). Differential privacy and machine learning: a survey and review. arXiv preprint arXiv:1412.7584.} \cite{ji2014differential}
+\item \href{https://arxiv.org/pdf/2007.07646.pdf}{Rigaki, M., \& Garcia, S. (2020). A survey of privacy attacks in machine learning. arXiv preprint arXiv:2007.07646.} \cite{rigaki2020survey}
+\end{itemize}
+
+\paragraph{Conclusion} - I wanted to refocus my efforts on the macro considerations related to ethics in machine learning at this point. I remembered that Rob May shared a weekend commentary as a part of the \href{https://inside.com/campaigns/inside-ai-31781/sections/inside-ai-commentary-by-robmay-275419}{Inside AI} newsletter recently about the dark side of reducing friction in taking action with advanced technology. Rob even went as far as sharing an article from one of my favorite technology related sources \href{https://www.theverge.com/2022/3/17/22983197/ai-new-possible-chemical-weapons-generative-models-vx}{“The Verge”} about just how easy and low friction it was to use machine learning to suggest new chemical weapon builds. That is a very real example of where reducing friction to doing a thing opens the door to very problematic actions that illustrate the need for a foundational set of ethics.
+
+If my call to action and introduction of an imperative to the machine learning ethics space were not enough to compel you to ground your efforts, then please consider a hand curated selection of three videos to assist you in your journey. Maybe one of them will catch your attention and help spread the word about ethics in machine learning.
+
+\section{Week 87: MLOps}
+This lecture is going to be provided in two parts. First, I’m going to provide you with a few scholarly articles that dig into what MLOps involves and how researchers are addressing the topic. Second, I’ll provide you my insights on the topic of MLOps which I have been presenting for the last few years. When you get to the point of applying ML techniques in production you will end up needing MLOps. 
+\subsection{MLOps research papers}
+\begin{itemize}
+\item \href{https://arxiv.org/pdf/2103.08942.pdf[Zugriffam09.09.2021}{Alla, S., \& Adari, S. K. (2021). What is mlops?. In Beginning MLOps with MLFlow (pp. 79-124). Apress, Berkeley, CA.} \cite{alla2021mlops}
+\item \href{https://www.researchgate.net/profile/Yue-Yu-126/publication/349802712_Towards_MLOps_A_Case_Study_of_ML_Pipeline_Platform/links/61dd00575c0a257a6fdd62f3/Towards-MLOps-A-Case-Study-of-ML-Pipeline-Platform.pdf}{Zhou, Y., Yu, Y., \& Ding, B. (2020, October). Towards mlops: A case study of ml pipeline platform. In 2020 International conference on artificial intelligence and computer engineering (ICAICE) (pp. 494-500). IEEE.} \cite{zhou2020towards}
+\item \href{https://arxiv.org/pdf/2102.07750.pdf}{Renggli, C., Rimanic, L., Gürel, N. M., Karlaš, B., Wu, W., \& Zhang, C. (2021). A data quality-driven view of mlops. arXiv preprint arXiv:2102.07750.} \cite{renggli2021data}
+\item \href{https://www.mdpi.com/2076-3417/11/19/8861/pd}{Ruf, P., Madan, M., Reich, C., \& Ould-Abdeslam, D. (2021). Demystifying mlops and presenting a recipe for the selection of open-source tools. Applied Sciences, 11(19), 8861.} \cite{ruf2021demystifying}
+\end{itemize}
+
+\subsection{My insights about MLOps}
+
+% This table was built using Table Generator
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+% \usepackage[normalem]{ulem}
+% \useunder{\uline}{\ul}{}
+\begin{table}[ht]
+\centering
+\begin{tabular}{lllllll}
+\textbf{\#} & \textbf{ML and MLOps GitHub Repositories}                                     & \textbf{Branches} & \textbf{Issues} & \textbf{Stars} & \textbf{Forks} & \textbf{Authors} \\
+1           & {\color[HTML]{0563C1} {\ul https://github.com/tensorflow/tensorflow}}         & 42                & 3,800           & 154,162        & 84,300         & 2,933            \\
+2           & {\color[HTML]{0563C1} {\ul https://github.com/pytorch/pytorch}}               & 4,620             & 5,000           & 47,011         & 12,500         & 1,785            \\
+3           & {\color[HTML]{0563C1} {\ul https://github.com/scikit-learn/scikit-learn}}     & 23                & 1,600           & 44,924         & 21,200         & 1,936            \\
+4           & {\color[HTML]{0563C1} {\ul https://github.com/kubeflow/kubeflow}}             & 23                & 209             & 10,066         & 1,600          & 220              \\
+5           & {\color[HTML]{0563C1} {\ul https://github.com/mlflow/mlflow}}                 & 72                & 571             & 8,583          & 1,900          & 290              \\
+6           & {\color[HTML]{0563C1} {\ul https://github.com/iterative/dvc}}                 & 4                 & 521             & 7,543          & 709            & 202              \\
+7           & {\color[HTML]{0563C1} {\ul https://github.com/cortexlabs/cortex}}             & 51                & 185             & 7,408          & 566            & 20               \\
+8           & {\color[HTML]{0563C1} {\ul https://github.com/h2oai/h2o-3}}                   & 1,900             & 127             & 5,261          & 1,800          & 140              \\
+9           & {\color[HTML]{0563C1} {\ul https://github.com/pachyderm/pachyderm}}           & 1,530             & 614             & 4,931          & 478            & 127              \\
+10          & {\color[HTML]{0563C1} {\ul https://github.com/optuna/optuna}}                 & 4                 & 147             & 4,283          & 112            & 483              \\
+11          & {\color[HTML]{0563C1} {\ul https://github.com/Netflix/metaflow}}              & 19                & 100             & 4,167          & 347            & 30               \\
+12          & {\color[HTML]{0563C1} {\ul https://github.com/wandb/client}}                  & 703               & 222             & 2,816          & 62             & 199              \\
+13          & {\color[HTML]{0563C1} {\ul https://github.com/polyaxon/polyaxon}}             & 14                & 103             & 2,764          & 265            & 80               \\
+14          & {\color[HTML]{0563C1} {\ul https://github.com/allegroai/clearml}}             & 1                 & 69              & 2,228          & 331            & 23               \\
+15          & {\color[HTML]{0563C1} {\ul https://github.com/SeldonIO/seldon-core}}          & 240               & 231             & 2,165          & 483            & 105              \\
+16          & {\color[HTML]{0563C1} {\ul https://github.com/tensorflow/tfx}}                & 368               & 202             & 1,362          & 416            & 100              \\
+17          & {\color[HTML]{0563C1} {\ul https://github.com/maiot-io/zenml/}}               & 4                 & 8               & 1,020          & 51             & 7                \\
+18          & {\color[HTML]{0563C1} {\ul https://github.com/microsoft/MLOps}}               & 9                 & 10              & 707            & 247            & 28               \\
+19          & {\color[HTML]{0563C1} {\ul https://github.com/mlrun/mlrun}}                   & 7                 & 20              & 294            & 76             & 28               \\
+20          & {\color[HTML]{0563C1} {\ul https://github.com/Hydrospheredata/hydro-serving}} & 30                & 21              & 214            & 35             & 15               \\
+21          & {\color[HTML]{0563C1} {\ul https://github.com/bodywork-ml/bodywork-core}}     & 5                 & 0               & 143            & 9              & 2                \\
+22          & {\color[HTML]{0563C1} {\ul https://github.com/MLReef/mlreef}}                 & 1                 & 0               & 14             & 0              & 8               
+\end{tabular}
+\caption{Highly used ML and MLops repositories on Github (verified between 3/17/2021 and 3/19/2021)}
+\label{tab:my-table1}
+\end{table}
+
+Some of the major players within the information technology space are trying to break into the machine learning operations (or MLOps) space. Like anything else, picking the right tools to get things done is about matching the right technology and use case to achieve the best possible results. We are really starting to see some solid maturity in the MLOps space. The next stage will be either a round of purchasing where established players buy up the upstart players building MLOps or the established players will build out the necessary elements to move past the newer players in the enterprise level market.
+
+Let's look at the first technology in Table 1~\ref{tab:my-table1} which happens to be TensorFlow. You should not be surprised to see that TensorFlow has by far the largest influence at 154,162 stars. Getting a star requires a GitHub user to click the star function. People have really placed a lot of attention on TensorFlow. It has 2,933 contributors that means that almost 3,000 people are contributing to TensorFlow. From that point you can see that PyTorch drops off considerably. It's going from around 154k stars to just 47k stars. The number of contributors drops off significantly as well. Now, you're down to around 1,785. Now on the PyTorch example, they do have 4,620 branches which honestly I don't know why you would want to look at that many branches. No human wants to manage that many branches of anything. That is unmanageable in terms of iteration. You can see that scikit-learn has roughly 44,000 stars and has 1,936 contributors. So you can kind of see here that the three major projects that are out there for machine learning are definitely adopted. People are using them and they're making forks of it, they're making versions of it, and they're starting to really dig into it out in the wild of software development right now.
+
+So now if we take it to the next level and look a little deeper in terms of what's happening with the MLOps part of it. You're gonna see a major drop-off. Remember TensorFlow had 154,162 stars. Now you're starting to see the number of stars drop off considerably. You're starting to see that number of stars at 10,000 or less. You are starting to see kubeflow, mlflow, and some of these things that you know are complex stuff like metaflow from Netflix and you're only gonna see 4,000 stars and each of these things is gonna have sub 500 contributors. We haven't seen everyone trying to implement MLOps swarm in and start using these things. One of the reasons for that rapid decline in interest has to be the previously described bucket 1 where you can just connect to an API and functionally someone else is running part of the day to day MLOps. 
+
+\section{Conclusion}
+Machine learning is an interesting and ever expanding domain within the greater world of artificial intelligence studies. Thank you for digging into this independent study introduction to machine learning syllabus. Please keep in mind that some of the links may have stopped working over time as the internet is not durable in terms of document permanence. That is why I have included in most cases two different formats of the reference as APA sytle within the text and BibTeX in the reference file you can download from my \href{https://github.com/nelslindahlx/Introduction-to-machine-learning-syllabus-2022}{GitHub} repository. 
+
+\section{Bonus Papers}
+This section includes a few additional papers that I have enjoyed and thought you might as well. They are not sorted in any particular order. This section may see the most updates between first publication and any updates of this syllabus. I’m sure that papers will get recommended to be included and if they don’t naturally fit into the main structure without overloading the reader, then they will end up here in the bonus papers section. .
+
+\begin{itemize}
+\item \href{https://arxiv.org/ftp/arxiv/papers/1801/1801.00631.pdf}{Marcus, G. (2018). Deep learning: A critical appraisal. arXiv preprint arXiv:1801.00631.} \cite{marcus2018deep}
+\item \href{https://arxiv.org/pdf/1912.02292.pdf}{Nakkiran, P., Kaplun, G., Bansal, Y., Yang, T., Barak, B., \& Sutskever, I. (2021). Deep double descent: Where bigger models and more data hurt. Journal of Statistical Mechanics: Theory and Experiment, 2021(12), 124003.} \cite{nakkiran2021deep} 
+\item \href{https://openreview.net/pdf?id=H18WqugAb}{Lake, B., \& Baroni, M. (2018). Still not systematic after all these years: On the compositional skills of sequence-to-sequence recurrent networks.} \cite{lake2018still}
+\item \href{https://arxiv.org/pdf/2104.12871.pdf}{Mitchell, M. (2021). Why AI is harder than we think. arXiv preprint arXiv:2104.12871.} \cite{mitchell2021ai} 
+\item \href{http://proceedings.mlr.press/v137/biderman20a/biderman20a.pdf}{Biderman, S., \& Scheirer, W. J. (2020). Pitfalls in machine learning research: Reexamining the development cycle.} \cite{biderman2020pitfalls} 
+\item \href{https://arxiv.org/pdf/1812.01074.pdf}{Henderson, P., \& Brunskill, E. (2018). Distilling information from a flood: A possibility for the use of meta-analysis and systematic review in machine learning research. arXiv preprint arXiv:1812.01074}. \cite{henderson2018distilling}
+\end{itemize}
+
 
 \section*{Acknowledgments}
-This was was supported in part by......
+This work product is a product of independent research based on my interest in sharing and learning about machine learning. I appreciate all of the kind words and suggestions Substack readers of \href{https://nelslindahl.substack.com/}{The Lindahl Letter} have provided over the last two years as well. If you are new to The Lindahl Letter, then please consider subscribing. New editions arrive every Friday. 
 
 %Bibliography
 \bibliographystyle{unsrt}  
