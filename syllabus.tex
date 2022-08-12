@@ -430,7 +430,7 @@ This lecture is going to be provided in two parts. First, I’m going to provide
 \begin{table}[ht]
 \centering
 \begin{tabular}{lllllll}
-\textbf{\#} & \textbf{ML and MLOps GitHub Repositories}                                     & \textbf{Branches} & \textbf{Issues} & \textbf{Stars} & \textbf{Forks} & \textbf{Authors} \\
+\textbf{\#} & \textbf{ML and MLOps GitHub Repositories}                                     & \textbf{Branches} & \textbf{Issues} & \textbf{Stars} & \textbf{Forks} & \textbf{Contribs} \\
 1           & {\color[HTML]{0563C1} {\ul https://github.com/tensorflow/tensorflow}}         & 42                & 3,800           & 154,162        & 84,300         & 2,933            \\
 2           & {\color[HTML]{0563C1} {\ul https://github.com/pytorch/pytorch}}               & 4,620             & 5,000           & 47,011         & 12,500         & 1,785            \\
 3           & {\color[HTML]{0563C1} {\ul https://github.com/scikit-learn/scikit-learn}}     & 23                & 1,600           & 44,924         & 21,200         & 1,936            \\
@@ -463,6 +463,45 @@ Some of the major players within the information technology space are trying to 
 Let's look at the first technology in Table 1~\ref{tab:my-table1} which happens to be TensorFlow. You should not be surprised to see that TensorFlow has by far the largest influence at 154,162 stars. Getting a star requires a GitHub user to click the star function. People have really placed a lot of attention on TensorFlow. It has 2,933 contributors that means that almost 3,000 people are contributing to TensorFlow. From that point you can see that PyTorch drops off considerably. It's going from around 154k stars to just 47k stars. The number of contributors drops off significantly as well. Now, you're down to around 1,785. Now on the PyTorch example, they do have 4,620 branches which honestly I don't know why you would want to look at that many branches. No human wants to manage that many branches of anything. That is unmanageable in terms of iteration. You can see that scikit-learn has roughly 44,000 stars and has 1,936 contributors. So you can kind of see here that the three major projects that are out there for machine learning are definitely adopted. People are using them and they're making forks of it, they're making versions of it, and they're starting to really dig into it out in the wild of software development right now.
 
 So now if we take it to the next level and look a little deeper in terms of what's happening with the MLOps part of it. You're gonna see a major drop-off. Remember TensorFlow had 154,162 stars. Now you're starting to see the number of stars drop off considerably. You're starting to see that number of stars at 10,000 or less. You are starting to see kubeflow, mlflow, and some of these things that you know are complex stuff like metaflow from Netflix and you're only gonna see 4,000 stars and each of these things is gonna have sub 500 contributors. We haven't seen everyone trying to implement MLOps swarm in and start using these things. One of the reasons for that rapid decline in interest has to be the previously described bucket 1 where you can just connect to an API and functionally someone else is running part of the day to day MLOps. 
+
+% This table was built using Table Generator
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+% \usepackage[normalem]{ulem}
+% \useunder{\uline}{\ul}{}
+\begin{table}[ht]
+\centering
+\begin{tabular}{lllllll}
+\textbf{\#} & \textbf{GitHub   repository links}                                            & \textbf{Branches} & \textbf{Issues} & \textbf{Stars} & \textbf{Forks} & \textbf{Contribs} \\
+1           & {\color[HTML]{0563C1} {\ul https://github.com/tensorflow/tensorflow}}         & 66                & 2,119           & 167,058        & 87,100         & 3,165             \\
+2           & {\color[HTML]{0563C1} {\ul https://github.com/pytorch/pytorch}}               & 6,501             & 9,015           & 57,940         & 16,100         & 2,398             \\
+3           & {\color[HTML]{0563C1} {\ul https://github.com/scikit-learn/scikit-learn}}     & 27                & 1,526           & 51,037         & 23,300         & 2,453             \\
+4           & {\color[HTML]{0563C1} {\ul https://github.com/mlflow/mlflow}}                 & 149               & 808             & 12,424         & 2,900          & 471               \\
+5           & {\color[HTML]{0563C1} {\ul https://github.com/kubeflow/kubeflow}}             & 37                & 161             & 11,757         & 2,000          & 257               \\
+6           & {\color[HTML]{0563C1} {\ul https://github.com/iterative/dvc}}                 & 7                 & 627             & 10,142         & 965            & 248               \\
+7           & {\color[HTML]{0563C1} {\ul https://github.com/cortexlabs/cortex}}             & 55                & 110             & 7,783          & 594            & 22                \\
+8           & {\color[HTML]{0563C1} {\ul https://github.com/optuna/optuna}}                 & 16                & 90              & 6,778          & 736            & 177               \\
+9           & {\color[HTML]{0563C1} {\ul https://github.com/h2oai/h2o-3}}                   & 2,401             & 64                & 5,922          & 1,900          & 161               \\
+10          & {\color[HTML]{0563C1} {\ul https://github.com/Netflix/metaflow}}              & 53                & 184             & 5,888          & 530            & 59                \\
+11          & {\color[HTML]{0563C1} {\ul https://github.com/pachyderm/pachyderm}}           & 968               & 692             & 5,607          & 532            & 152               \\
+12          & {\color[HTML]{0563C1} {\ul https://github.com/wandb/client}}                  & 406               & 455             & 4,515          & 348            & 107               \\
+13          & {\color[HTML]{0563C1} {\ul https://github.com/allegroai/clearml}}             & 3                 & 261             & 3,493          & 468            & 50                \\
+14          & {\color[HTML]{0563C1} {\ul https://github.com/SeldonIO/seldon-core}}          & 294               & 139             & 3,312          & 693            & 153               \\
+15          & {\color[HTML]{0563C1} {\ul https://github.com/polyaxon/polyaxon}}             & 16                & 108             & 3,135          & 306            & 93                \\
+16          & {\color[HTML]{0563C1} {\ul https://github.com/maiot-io/zenml/}}               & 49                & 22              & 2,267          & 193            & 45                \\
+17          & {\color[HTML]{0563C1} {\ul https://github.com/tensorflow/tfx}}                & 502               & 208             & 1,803          & 604            & 139               \\
+18          & {\color[HTML]{0563C1} {\ul https://github.com/MLReef/mlreef}}                 & 3                 & 0               & 1,393          & 320            & 9                 \\
+19          & {\color[HTML]{0563C1} {\ul https://github.com/microsoft/MLOps}}               & 10                & 11              & 1,166          & 397            & 28                \\
+20          & {\color[HTML]{0563C1} {\ul https://github.com/mlrun/mlrun}}                   & 23                & 35              & 782            & 154            & 54                \\
+21          & {\color[HTML]{0563C1} {\ul https://github.com/bodywork-ml/bodywork-core}}     & 1                 & 20              & 399            & 19             & 2                 \\
+22          & {\color[HTML]{0563C1} {\ul https://github.com/Hydrospheredata/hydro-serving}} & 13                & 2               & 260            & 42             & 22               
+\end{tabular}
+\caption{Highly used ML and MLops repositories on Github (verified on 8/12/2022)}
+\label{tab:my-table2}
+\end{table}
+
+You probably noticed that the previous set of analysis was looking at data from 2021. I’m sure you wanted to see some updated data to see if things had changed significantly. I went back and reran the same table build to create a Table 2~\ref{tab:my-table2} 2022 version. A few of the repositories changed order in terms of total stars, but for the most part things are relatively the same.
 
 \section{Conclusion}
 Machine learning is an interesting and ever expanding domain within the greater world of artificial intelligence studies. Thank you for digging into this independent study introduction to machine learning syllabus. Please keep in mind that some of the links may have stopped working over time as the internet is not durable in terms of document permanence. That is why I have included in most cases two different formats of the reference as APA sytle within the text and BibTeX in the reference file you can download from my \href{https://github.com/nelslindahlx/Introduction-to-machine-learning-syllabus-2022}{GitHub} repository that contains all the content and files from this effort. 
